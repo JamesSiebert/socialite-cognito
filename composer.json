@@ -1,0 +1,25 @@
+{
+    "name": "jamessiebert/cognito",
+    "description": "AWS Cognito OAuth2 Provider for Laravel Socialite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JamesSiebert",
+            "email": "js@media360.com.au"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "socialiteproviders/manager": "~4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9.4",
+        "phpunit/phpunit": "~4.8|~5.4|~6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\Cognito\\": ""
+        }
+    }
+}
