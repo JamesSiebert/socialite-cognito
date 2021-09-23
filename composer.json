@@ -1,5 +1,5 @@
 {
-    "name": "jamessiebert/cognito",
+    "name": "jamessiebert/socialite-cognito",
     "description": "AWS Cognito OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [
