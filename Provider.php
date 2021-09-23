@@ -51,7 +51,7 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase($this->getLaravelPassportUrl('authorize_uri'), $state);
+        return $this->buildAuthUrlFromBase($this->getCognitoUrl('authorize_uri'), $state);
     }
 
     /**
@@ -61,7 +61,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return $this->getLaravelPassportUrl('token_uri');
+        return $this->getCognitoUrl('token_uri');
     }
 
     /**
@@ -73,7 +73,7 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get($this->getLaravelPassportUrl('userinfo_uri'), [
+        $response = $this->getHttpClient()->get($this->getCognitoUrl('userinfo_uri'), [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
             ],
