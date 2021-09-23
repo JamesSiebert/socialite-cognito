@@ -120,9 +120,9 @@ class Provider extends AbstractProvider
     protected function getCognitoUrl($type)
     {
         return rtrim($this->getConfig('host'), '/').'/'.ltrim(($this->getConfig($type, Arr::get([
-            'authorize_uri' => 'login',
-            'token_uri'     => 'oauth/token',
-            'userinfo_uri'  => 'api/user',
+            'authorize_uri' => 'oauth2/authorize',
+            'token_uri'     => 'oauth2/token',
+            'userinfo_uri'  => 'oauth2/userInfo',
         ], $type))), '/');
     }
 
